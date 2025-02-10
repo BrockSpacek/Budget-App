@@ -11,10 +11,10 @@
 <body>
 
     <div class="flex justify-center">
-        <div class="border-2 rounded-3xl w-[95%] mt-72 bg-gray-400 p-6">
+        <div class="border-2 rounded-3xl w-[95%] mt-60 bg-gray-400 p-6">
             <div class="text-center">
                 <h1 class="mt-4 text-3xl">Your Budget</h1>
-                <h1 id="BudgetText" class="text-6xl font-bold"></h1>
+                <h1 id="BudgetText" class="text-6xl font-bold">$0</h1>
             </div>
 
             <div class="flex flex-col items-center mt-6">
@@ -27,8 +27,8 @@
             </div>
 
             <div class="mt-8 p-4">
-                <h2 class="text-2xl mb-4">Your Expenses</h2>
-                <div id="expensesList" class="space-y-2"></div>
+                <h2 class="text-2xl mb-4">Your Expenses:</h2>
+                <div id="expensesList" class="space-y-2 max-h-[240px] overflow-y-auto"></div>
             </div>
         </div>
     </div>
