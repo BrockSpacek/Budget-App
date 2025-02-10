@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Budget App</title>
+</head>
+
+<body>
+
+    <div class="flex justify-center">
+        <div class="border-2 rounded-3xl w-[95%] mt-72 bg-gray-400 p-6">
+            <div class="text-center">
+                <h1 class="mt-4 text-3xl">Your Budget</h1>
+                <h1 id="BudgetText" class="text-6xl font-bold"></h1>
+            </div>
+
+            <div class="flex flex-col items-center mt-6">
+                <button id="UpdateBudgetBtn"
+                    class="bg-green-500 h-[40px] w-[300px] rounded-3xl text-2xl border-2 mt-3">Update Budget</button>
+                <button id="AddExpenseBtn" class="bg-red-600 h-[40px] w-[300px] rounded-3xl text-2xl border-2 mt-3">Add
+                    Expense</button>
+                <button id="UpdateExpenseBtn"
+                    class="bg-cyan-400 h-[40px] w-[300px] rounded-3xl text-2xl border-2 mt-3">Update Expenses</button>
+            </div>
+
+            <div class="mt-8 p-4">
+                <h2 class="text-2xl mb-4">Your Expenses</h2>
+                <div id="expensesList" class="space-y-2"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="budgetPopup" class="hidden fixed inset-0 flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg w-[90%] ">
+            <h2 class="text-2xl mb-4">Update Budget</h2>
+            <input type="number" id="budgetInput" class="w-full p-2 border-2 rounded-lg mb-4"
+                placeholder="Enter new budget">
+            <button id="saveBudgetBtn" class="bg-green-500 px-4 py-2 text-white rounded-lg">Save</button>
+            <button id="cancelBudgetBtn" class="bg-gray-300 px-4 py-2 rounded-lg ml-2">Close</button>
+        </div>
+    </div>
+
+    <div id="expensePopup" class="hidden fixed inset-0 flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg w-[90%]">
+            <h2 class="text-2xl mb-4">Add Expense</h2>
+            <input type="text" id="expenseName" class="w-full p-2 border-2 rounded-lg mb-2" placeholder="Expense name">
+            <input type="number" id="expenseAmount" class="w-full p-2 border-2 rounded-lg mb-4" placeholder="Amount">
+            <button id="saveExpenseBtn" class="bg-red-600 px-4 py-2 text-white rounded-lg">Save</button>
+            <button id="cancelExpenseBtn" class="bg-gray-300 px-4 py-2 rounded-lg ml-2">Close</button>
+        </div>
+    </div>
+
+    <div id="viewExpensesPopup" class="hidden fixed inset-0 flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg w-[90%]">
+            <h2 class="text-2xl mb-4">All Expenses</h2>
+            <div id="expensesListPopup" class="mb-4 max-h-[240px] overflow-y-auto"></div>
+            <button id="closeViewExpensesBtn" class="bg-gray-300 px-4 py-2 rounded-lg">Close</button>
+        </div>
+    </div>
+
+
+
+
+
+    <script type="module" src="./scripts/app.js"></script>
+</body>
+
+</html>
